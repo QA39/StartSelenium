@@ -1,3 +1,5 @@
+package oop;
+
 public class Car {
 
     // characteristics - fields - properties - data members
@@ -16,10 +18,15 @@ public class Car {
     // 1. object non static
     public void toDrive(){
         System.out.println("Driving");
+        anyPrivateMethod();
     }
 
     public void toStop(){
         System.out.println("Stopping");
+    }
+
+    private void anyPrivateMethod(){
+        System.out.println("I'm private");
     }
     // 2. class static
     public static void fire(){
@@ -32,6 +39,8 @@ public class Car {
         System.out.println("Fire fighting");
     }
     // type + name + type parameter = signature
+
+//    public abstract void absMethod();
 
     // constructors
     // 1. default constructor
@@ -127,7 +136,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "oop.Car{" +
                 "engine=" + engine +
                 ", year=" + year +
                 ", electric=" + electric +
@@ -137,6 +146,9 @@ public class Car {
                 ", price=" + price +
                 '}';
     }
+
+
+
 }
 
 /*

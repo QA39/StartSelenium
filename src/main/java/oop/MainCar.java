@@ -1,3 +1,5 @@
+package oop;
+
 public class MainCar {
 
     public static void main(String[] args) {
@@ -38,6 +40,44 @@ public class MainCar {
                 .withYear(2020)
                 .withEngine(2.4);
 
+        SportCar sc1 = new SportCar();
+//        System.out.println(sc1.);
+        Truck t1 = new Truck();
+
+        Formula1 f1 = new Formula1();
+        f1.sendSOS();
+
+        f1.toSale();
+
+        Movable.anyMethod();
+        f1.otherMethod();
+
+        Car c5 = new Formula1();
+
+        Movable m1 = new Formula1();
+
+//        oop.Movable m2 = new oop.Car();
+
+        t1.toDrive();
+        sc1.toDrive();
+        f1.toDrive();
+
+        Car[] cars = new Car[3];
+        cars[0] = t1;
+        cars[1] = sc1;
+        cars[2] = f1;
+
+        for(Car car : cars){
+            car.toDrive();
+        }
+
+        Movable[] arr = new Movable[2];
+        arr[0] = new Formula1();
+        arr[1] = new Truck();
+
+        for(Movable mov : arr){
+            mov.sendSOS();
+        }
 
 
     }
@@ -50,7 +90,7 @@ public class MainCar {
 
             Stack                               Heap
 
-    Car c <------------- reference ------ { engine = 0.0
+    oop.Car c <------------- reference ------ { engine = 0.0
                                             year = 0
                                             electric = false
                                             colors = null
@@ -58,7 +98,7 @@ public class MainCar {
                                             brand = HONDA
                                             model = null
                                            }
-    Car c1 <------------- reference ------ { engine = 0.0
+    oop.Car c1 <------------- reference ------ { engine = 0.0
                                             year = 2020
                                             electric = false
                                             colors = null
@@ -68,11 +108,19 @@ public class MainCar {
                                            }
 
 
+                        Inheritance
+                                   X oop.Movable abstract sendSOS() X
+                        oop.Car                                  Boat
+             |                      |                   |           |
+           oop.Truck                oop.SportCar            FishBoat       SportBoat
+             |                      |             |         |       |
+          oop.AutoTrain               oop.Formula1      Motor      Paddle   Jet
+                        length
 
+                       send SOS signal
 
-
-
-
+                    Interface oop.Movable
+                    sendSOS();
 
 
 
