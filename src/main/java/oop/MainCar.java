@@ -47,7 +47,7 @@ public class MainCar {
         Formula1 f1 = new Formula1();
         f1.sendSOS();
 
-        f1.toSale();
+        f1.toSell();
 
         Movable.anyMethod();
         f1.otherMethod();
