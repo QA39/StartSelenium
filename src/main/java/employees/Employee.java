@@ -1,6 +1,6 @@
 package employees;
 
-public class Employee {
+public abstract class Employee implements Salary{
     private int id;
     private String name;
     private int age;
@@ -23,9 +23,9 @@ public class Employee {
         return age;
     }
 
-    public double calcSalary(){
-        return 0;
-    }
+//    public double calcSalary(){
+//        return 0;
+//    }
 
     public String toString(){
         return id + " " + name + " " + age;

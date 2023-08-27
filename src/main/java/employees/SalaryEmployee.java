@@ -2,11 +2,14 @@ package employees;
 
 public class SalaryEmployee extends Employee{
 
-    private double salary;
+    private double salary = minSalary;
 
     public SalaryEmployee(int id, String name, int age, double salary) {
         super(id, name, age);
-        this.salary = salary;
+        if(salary > minSalary) {
+            this.salary = salary;
+        }
+
     }
 
     public double getSalary() {
